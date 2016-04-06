@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<title>Clickjack test page</title>
+
+<h1>Clickjacking Test</h1>
+
+<p id="demo"></p>
+
+<script>
+// update this variable for testing
+var url = "https://somesite.tld/";
+
+document.getElementById("demo").innerHTML = "Website tested for clickjacking: " + url;
+
+var ifr = document.createElement('iframe')
+ifr.src = url
+document.body.appendChild(ifr)
+
+</script>
+
+
+</html>
