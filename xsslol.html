@@ -1,0 +1,67 @@
+<html>
+
+<script>
+function bgDisco()
+{
+var  x =Math.round(255*Math.random());
+
+var num1 =getHex(x);
+
+var  y =Math.round(255*Math.random());
+
+var num2 =getHex(y);
+
+var  z =Math.round(255*Math.random());
+
+var num3 =getHex(z);
+
+document.body.style.background="#"+num1+num2+num3;
+
+setTimeout("bgDisco()",50);
+}
+function getHex(dec)
+{
+var hexArray = new Array( "0", "1", "2", "3","4", "5", "6", "7","8", "9", "A", "B","C", "D", "E", "F" );
+ 
+var code1 = Math.floor(dec / 16);
+ 
+var code2 = dec - code1 * 16;
+ 
+var decToHex = hexArray[code2];
+ 
+return (decToHex);
+} 
+</script>
+<body onload="bgDisco()">
+<script>
+var i=5;
+for (i=5;i>=0;i--)
+  {
+  for (j=0;j<5;j++)  
+  {
+  x=Math.round((Math.random()*2000)-1000);
+  y=Math.round((Math.random()*2000)-1000);
+  self.resizeTo(x,y);
+  window.moveBy(x,y);
+  }
+  x=Math.round((Math.random()*2000)-1000);
+  y=Math.round((Math.random()*2000)-1000);
+  self.resizeTo(x,y);
+  window.moveBy(x,y);
+alert('ATTENTION:\r\nVirus Launch in '+i);
+  }
+alert('ATTENTION:\r\nYou have launched the virus!\n\rClick \"Cancel\" to abort');
+</script>
+<script>
+var a=0;
+for (a=0;a<=1000;a++)
+  {
+  x=Math.round((Math.random()*2000)-100);
+  y=Math.round((Math.random()*2000)-100);
+  self.resizeTo(x,y);
+  window.moveBy(x,y);
+  }
+  self.resizeTo(1500,1500);
+  window.moveTo(0,0);
+</script>
+</html>
